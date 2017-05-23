@@ -18,13 +18,13 @@ namespace PayroleSystem
 
         public string NameOfStaff { get; private set; }
 
-        public float HoursWorked
+        public int HoursWorked
         {
             get { return hWorked; }
             set
             {
                 if (value > 0)
-                    hWorked = (int)value;
+                    hWorked = value;
                 else
                     hWorked = 0;
             }
@@ -48,7 +48,7 @@ namespace PayroleSystem
 
         public override string ToString()
         {
-            return "Name of Staff = " + NameOfStaff + ", hourlyRate = " + hourlyRate + ", hWorked = " + hWorked + ", BasicPay = " + BasicPay + ", TotalPay = " + TotalPay + ", HoursWorked = " + HoursWorked;
+            return "\nName of Staff = " + NameOfStaff + "\nHourly Rate = " + hourlyRate + "\nHours Worked = " + hWorked + "\nBasic Pay = " + BasicPay + "\n\nTotal Pay = " + TotalPay;
         }
     }
 }
