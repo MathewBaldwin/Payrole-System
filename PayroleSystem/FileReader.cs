@@ -15,7 +15,7 @@ namespace PayroleSystem
 
             string[] result = new string[2];
 
-            string path = @"C:\Users\honda\Documents\Visual Studio 2017\Projects\PayroleSystem\PayroleSystem\bin\Debug";
+            string path = @"C:\Users\honda\Documents\Visual Studio 2017\Projects\PayroleSystem\PayroleSystem\bin\Debug\Staff.txt";
 
             string[] seperator = { ", " };
 

@@ -32,9 +32,9 @@ namespace PayroleSystem
 
         public Staff(string name, float rate)
         {
-            name = NameOfStaff;
+            NameOfStaff = name;
 
-            rate = hourlyRate;
+            hourlyRate = rate;
         }
 
         public virtual void CalculatePay()
