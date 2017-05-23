@@ -34,19 +34,19 @@ namespace PayroleSystem
                 {
                     sw.WriteLine("PAYSLIP FOR {0} {1}", (MonthsOfTheYear)month, year);
                     sw.WriteLine("================================");
-                    sw.WriteLine("Name Of Staff: {member.NameOfStaff}");
-                    sw.WriteLine("Hours Worked: {member.HoursWorked}{0}");
+                    sw.WriteLine("Name Of Staff: {0}", member.NameOfStaff);
+                    sw.WriteLine("Hours Worked: {0}", member.HoursWorked);
                     sw.WriteLine("");
-                    sw.WriteLine("Basic Pay: {member.BasicPay:C}");
+                    sw.WriteLine("Basic Pay: {0:C}", member.BasicPay);
 
                     if (member.GetType() == typeof(Manager))
-                        sw.WriteLine("Allowance: {(Manager)member).Allowance:C}");
+                        sw.WriteLine("Allowance: {0:C}", ((Manager)member).Allowance);
                     else if (member.GetType() == typeof(Admin))
-                        sw.WriteLine("Overtime: {(Admin)member).Overtime:C}");
+                        sw.WriteLine("Overtime: {0:C}", ((Admin)member).Overtime);
 
                     sw.WriteLine("");
                     sw.WriteLine("================================");
-                    sw.WriteLine("Total Pay: {member.TotalPay:C}");
+                    sw.WriteLine("Total Pay: {0:C}", member.TotalPay);
                     sw.WriteLine("================================");
                     sw.Close();
                 }
@@ -68,7 +68,7 @@ namespace PayroleSystem
                 sw.WriteLine("");
 
                 foreach (var f in result)
-                    sw.WriteLine("Name Of Staff: {f.NameOfStaff}, Hours Worked: {f.HoursWorked}");
+                    sw.WriteLine("Name Of Staff: {0}, Hours Worked: {1}", f.NameOfStaff, f.HoursWorked);
                 sw.Close();
             }
         }

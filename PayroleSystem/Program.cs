@@ -54,7 +54,7 @@ namespace PayroleSystem
             {
                 try
                 {
-                    Console.Write("\nEnter Hours Worked for {myStaff[i].NameOfStaff}: ");
+                    Console.Write("\nEnter Hours Worked for {0}: ", myStaff[i].NameOfStaff);
                     myStaff[i].HoursWorked = Convert.ToInt32(Console.ReadLine());
                     myStaff[i].CalculatePay();
 
